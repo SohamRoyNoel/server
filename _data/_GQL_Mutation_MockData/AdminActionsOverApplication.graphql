@@ -1,0 +1,24 @@
+# While Activate or Deactivate the app
+mutation{
+  a_applicationBlockerReviver_Editor(
+    AdminActionOverApplicationType: {
+      appid: 1
+    }
+  )
+}
+
+# While Rename the app name
+# NOTE: IF updation is done on DEACTIVATED APP, it will ACTIVATE the app by default
+mutation{
+  a_applicationBlockerReviver_Editor(
+    AdminActionOverApplicationType: {
+      appid: 1,
+      appName: "TestApp12"
+    }
+  )
+}
+
+# Admin Query
+{
+  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsInVzZXJGTmFtZSI6IkphaW1lIiwidXNlckxOYW1lIjoiTGFubmlzdGVyIiwidXNlck5hbWUiOiJKYWltZSBMYW5uaXN0ZXIiLCJ1c2VyRW1haWwiOiJyb3lzdW1pdC4xOTY2QGdtYWlsLmNvbSIsInVzZXJSb2xlIjoiQWRtaW4iLCJ1c2VyQVBJS2V5IjoiNHQzdWpPendFUEx1alZ4UVgzTXdsM1hKdmdPbCIsInRva2VuVmVyc2lvbiI6MCwidXNlckFjdGl2ZUZsYWciOjEsImlhdCI6MTYxMTI1ODAwNSwiZXhwIjoxNjExMjYxNjA1fQ.nZxbxBkt8QDY-Z48ZlHeEbaLj8ZalcIAmi-8Z4p3Isg"
+}

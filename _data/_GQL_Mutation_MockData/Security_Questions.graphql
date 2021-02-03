@@ -1,0 +1,19 @@
+# Create a question mutation
+mutation{
+  createSecurityQuestions(SecurityQuestionsInsertion: {
+    securityQuestion: "What is your preferred food?"
+  })
+}
+
+# Get all security question
+query{
+  getSecurityQuestions{
+    SeqQus_ID,
+    SeqQus_Qus
+  }
+}
+
+# Secured admin route: header
+{
+  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsInVzZXJGTmFtZSI6IkphaW1lIiwidXNlckxOYW1lIjoiTGFubmlzdGVyIiwidXNlck5hbWUiOiJKYWltZSBMYW5uaXN0ZXIiLCJ1c2VyRW1haWwiOiJyb3lzdW1pdC4xOTY2QGdtYWlsLmNvbSIsInVzZXJSb2xlIjoiQWRtaW4iLCJ1c2VyQVBJS2V5IjoiOTE0dFNwcGVpN1JDaXlpNjVKbnpUeHF2MDZYbyIsInVzZXJBY3RpdmVGbGFnIjoxLCJpYXQiOjE2MDk5NDQyMTcsImV4cCI6MTYwOTk0NzgxN30.oxfE9Utv0QqSYFKpn2w9fWW9JuYka79j1l719DVNnEM"
+}

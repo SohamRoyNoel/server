@@ -1,0 +1,11 @@
+query{
+  getPages{
+    Page_ID,
+    Page_Name
+  }
+}
+
+# Admin Routes
+{
+  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjMsInVzZXJGTmFtZSI6IlRoZW9uIiwidXNlckxOYW1lIjoiZ3Jlam95IiwidXNlck5hbWUiOiJUaGVvbiBHcmVqb3kiLCJ1c2VyRW1haWwiOiJzb2hhbS5yb3kuZGV2ZWxvcGVyQGdtYWlsLmNvbSIsInVzZXJSb2xlIjoiVXNlciIsInVzZXJBUElLZXkiOiJyNHVUOXhxMDFhVlZlU3Q3VTllZE9YVkNsQ05SIiwidXNlckFjdGl2ZUZsYWciOjEsImlhdCI6MTYwOTQwNDU0NCwiZXhwIjoxNjA5NDA4MTQ0fQ.ByE-F87IvUj3XrERiUbsU93c2lRMswDbh9fKhrdHsTU"
+}

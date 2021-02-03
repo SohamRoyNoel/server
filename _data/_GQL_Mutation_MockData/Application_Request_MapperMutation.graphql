@@ -1,0 +1,17 @@
+mutation{
+  createRequestAccepter(
+    RequestCreatorMutation:{
+      Application_Name: "TestApp1"
+    }
+  )
+}
+
+# Authenticated Queries
+query{
+  getAppListWhereUserHasPendingRequest{
+    Request_ID,
+    Request_App_Name,
+    Request_App_ApprovedBy_Reg_UserID,
+    Request_Status
+  }
+}

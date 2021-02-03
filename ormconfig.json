@@ -1,0 +1,34 @@
+{
+   "type": "mssql",
+   "host": "gicpirates.database.windows.net",
+   "username": "GICPiratesAdmin",
+   "password": "EzioAuditore#2",
+   "database": "plhdashboardb_Dev_Mock",
+   "synchronize": true,
+   "autoSchemaSync": true,
+   "logging": false,
+   "options": {
+      "encrypt": true,
+      "enableArithAbort": true
+   },
+   "entities": [
+      "src/entity/**/*.ts"
+   ],
+   "migrations": [
+      "src/migration/**/*.ts"
+   ],
+   "subscribers": [
+      "src/subscriber/**/*.ts"
+   ],
+   "cli": {
+      "entitiesDir": "src/entity",
+      "migrationsDir": "src/migration",
+      "subscribersDir": "src/subscriber"
+   },
+   "seeds": [
+      "src/database/seeds/**/*{.ts,.js}"
+   ],
+  "factories": [
+     "src/database/factories/**/*{.ts,.js}"
+   ]
+}

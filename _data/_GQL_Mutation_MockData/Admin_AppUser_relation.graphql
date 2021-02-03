@@ -1,0 +1,27 @@
+# To get all apps where user has access : ADMIN
+# To get USER specific apps where user has access : USER
+# identified by JWT
+query{
+  au_getAppsMappedToUsers{
+    Reg_UserID,
+    Reg_UserName,
+    Application_ID,
+    Application_Name
+  }
+}
+
+# Allow or restrict user's app access
+mutation{
+  au_killOrReviveUserMappedToApp(
+    AdminActionOverUserApplicationType:{
+      userId: 3,
+      appId: 1
+    }
+  )
+}
+
+# Admin Auth
+{
+  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsInVzZXJGTmFtZSI6IkphaW1lIiwidXNlckxOYW1lIjoiTGFubmlzdGVyIiwidXNlck5hbWUiOiJKYWltZSBMYW5uaXN0ZXIiLCJ1c2VyRW1haWwiOiJyb3lzdW1pdC4xOTY2QGdtYWlsLmNvbSIsInVzZXJSb2xlIjoiQWRtaW4iLCJ1c2VyQVBJS2V5IjoiNHQzdWpPendFUEx1alZ4UVgzTXdsM1hKdmdPbCIsInRva2VuVmVyc2lvbiI6MCwidXNlckFjdGl2ZUZsYWciOjEsImlhdCI6MTYxMTI5OTk4MywiZXhwIjoxNjExMzAzNTgzfQ.ky4xyyhKFZiZpQyoB-6dbRUGIY7Fx8xkqkzATPsSmzY"
+}
+# To get all apps where user has access : ADMIN

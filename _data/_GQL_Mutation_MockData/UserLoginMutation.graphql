@@ -1,0 +1,20 @@
+# For Tyrion
+mutation{
+  findLoggedInUser(email: "callforcodei@gmail.com", password: "Pa$$w0rd"){
+    accessToken
+  }
+}
+
+# For Theon
+mutation{
+  findLoggedInUser(email: "soham.roy.developer@gmail.com", password: "Pa$$w0rd"){
+    accessToken
+  }
+}
+
+# For Daenerys
+mutation{
+  findLoggedInUser(email: "noelleroy720@gmail.com", password: "Pa$$w0rd"){
+    accessToken
+  }
+}

@@ -1,0 +1,7 @@
+version: "3.7"
+services: 
+  plhservice:
+    container_name: plhservice
+    image: roysoha/plhserver
+    ports: 
+      - "4001:8080"

@@ -1,0 +1,27 @@
+# Push single or Bulk test scenarios : accepts multiple test scenarios belongs to one app at a time
+mutation{
+  acceptTestScenario(acceptTestScenarioMutation: {
+    applicationsName: ["TS1", "TS2", "TS3"], 
+    TS_Application_Name: "TestApp1"
+  })
+}
+
+# Get Data By user:
+query{
+  getTestScenarios(getTestScenarioMutation: {
+    TS_Application_ID: 2
+  }){
+    TS_ID,
+    TS_Name,
+    userRegistrations{
+      Reg_F_Name,
+      Reg_L_Name,
+      Reg_UserName
+    }
+  }
+}
+
+header:
+{
+  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsInVzZXJGTmFtZSI6IkphaW1lIiwidXNlckxOYW1lIjoiTGFubmlzdGVyIiwidXNlck5hbWUiOiJKYWltZSBMYW5uaXN0ZXIiLCJ1c2VyRW1haWwiOiJyb3lzdW1pdC4xOTY2QGdtYWlsLmNvbSIsInVzZXJSb2xlIjoiQWRtaW4iLCJ1c2VyQVBJS2V5IjoiM05Ed0M2RnNMWHpjd0doNWJ2VVFyamZRRWpiRiIsInVzZXJBY3RpdmVGbGFnIjoxLCJpYXQiOjE2MDk4MzM4NjksImV4cCI6MTYwOTgzNzQ2OX0.KCUGe1UDUj-S7iE2UFUL1CMJusWQEiu_sCizckgfQ6M"
+}

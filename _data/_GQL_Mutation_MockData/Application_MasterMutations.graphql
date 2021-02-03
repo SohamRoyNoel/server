@@ -1,0 +1,22 @@
+# Create Application:
+mutation{
+  a_createApplications(AdminApplicationInsertion: {
+    Application_Name: "TestApp3"
+  })
+}
+
+# Set all apps for admin
+query{
+  getApplications{
+    Application_ID,
+    Application_Name,
+    Application_Reg_Admin_UserID{
+      Reg_UserName
+    }
+  }
+}
+
+# Protected Route:
+# {
+#   "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsInVzZXJGTmFtZSI6IkRhZW5lcnlzIiwidXNlckxOYW1lIjoiVGFyZ2FyeWVuIiwidXNlck5hbWUiOiJEYWVuZXJ5cyBUYXJnYXJ5ZW4iLCJ1c2VyRW1haWwiOiJub2VsbGVyb3k3MjBAZ21haWwuY29tIiwidXNlclJvbGUiOiJBZG1pbiIsInVzZXJBUElLZXkiOiJVcWptSTlzSFF3d1dIZ1ZTd1FsSFZwSjdESHdiIiwidXNlckFjdGl2ZUZsYWciOjEsImlhdCI6MTYwOTMzMzY0OCwiZXhwIjoxNjA5MzM3MjQ4fQ.36DwO_bHz57wmBJdfRl9qM2qKtbqpXmXXrV-hgGB50g"
+# }

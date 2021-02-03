@@ -1,0 +1,77 @@
+mutation{
+  createRegistrations(
+    RegistrationMutation: {      
+      Reg_F_Name: "Theon",
+      Reg_L_Name: "grejoy",
+      Reg_UserName: "Theon Grejoy",
+      Reg_Email: "soham.roy.developer@gmail.com",
+      Reg_Password: "Pa$$w0rd",
+      regSecurityQusIDSeqQusID: 1,
+      Reg_Security_Qus_Ans: "yes",
+    }
+  )
+}
+
+mutation{
+  createRegistrations(
+    RegistrationMutation: {      
+      Reg_F_Name: "Jaime",
+      Reg_L_Name: "Lannister",
+      Reg_UserName: "Jaime Lannister",
+      Reg_Email: "roysumit.1966@gmail.com",
+      Reg_Password: "Pa$$w0rd",
+      regSecurityQusIDSeqQusID: 1,
+      Reg_Security_Qus_Ans: "yes",
+    }
+  )
+}
+
+mutation{
+  createRegistrations(
+    RegistrationMutation: {      
+      Reg_F_Name: "Daenerys",
+      Reg_L_Name: "Targaryen",
+      Reg_UserName: "Daenerys Targaryen",
+      Reg_Email: "noelleroy720@gmail.com",
+      Reg_Password: "Pa$$w0rd",
+      regSecurityQusIDSeqQusID: 1,
+      Reg_Security_Qus_Ans: "yes", 
+    }
+  )
+}
+
+mutation{
+  createRegistrations(
+    RegistrationMutation: {      
+      Reg_F_Name: "Tyrion",
+      Reg_L_Name: "Lannister",
+      Reg_UserName: "Tyrion Lannister",
+      Reg_Email: "callforcodei@gmail.com",
+      Reg_Password: "Pa$$w0rd",
+      regSecurityQusIDSeqQusID: 2,
+      Reg_Security_Qus_Ans: "yes",
+    }
+  )
+}
+
+mutation{
+  createRegistrations(
+    RegistrationMutation: {      
+      Reg_F_Name: "Joffrey",
+      Reg_L_Name: "Baratheon",
+      Reg_UserName: "Joffrey Baratheon",
+      Reg_Email: "sofa.king.plh@gmail.com",
+      Reg_Password: "Pa$$w0rd",
+      regSecurityQusIDSeqQusID: 3,
+      Reg_Security_Qus_Ans: "no",
+    }
+  )
+}
+
+# Find all users: Protected Route
+query{
+  getUsers{
+    Reg_UserID,
+    Reg_UserName
+  }
+}

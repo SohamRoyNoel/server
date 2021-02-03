@@ -1,0 +1,30 @@
+# Mandatory: uid
+# Optional: makeAdmin, email
+
+# When admin need to Block or unblock an user
+mutation{
+  a_userBlockerReviver_AdminMaker_EmailChanger(AdminActionOverUserType:{
+    uid: 5
+  })
+}
+
+# When admin need to update user's role from USER to ADMIN or vice versa
+mutation{
+  a_userBlockerReviver_AdminMaker_EmailChanger(AdminActionOverUserType:{
+    uid: 5,
+    makeAdmin: "Admin"
+  })
+}
+
+# When admin needs to change the email id of an user
+mutation{
+  a_userBlockerReviver_AdminMaker_EmailChanger(AdminActionOverUserType:{
+    uid: 5,
+    email:"callforcodei1@gmail.com"
+  })
+}
+
+# Auth
+{
+  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsInVzZXJGTmFtZSI6IkphaW1lIiwidXNlckxOYW1lIjoiTGFubmlzdGVyIiwidXNlck5hbWUiOiJKYWltZSBMYW5uaXN0ZXIiLCJ1c2VyRW1haWwiOiJyb3lzdW1pdC4xOTY2QGdtYWlsLmNvbSIsInVzZXJSb2xlIjoiQWRtaW4iLCJ1c2VyQVBJS2V5IjoiNHQzdWpPendFUEx1alZ4UVgzTXdsM1hKdmdPbCIsInRva2VuVmVyc2lvbiI6MCwidXNlckFjdGl2ZUZsYWciOjEsImlhdCI6MTYxMTIzNjU4MywiZXhwIjoxNjExMjQwMTgzfQ.tOznx0o0njEDaqXy8J5V4kJkPTWpqJCcWu2grY1pTSs"
+}
